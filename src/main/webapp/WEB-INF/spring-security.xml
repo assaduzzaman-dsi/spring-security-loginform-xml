@@ -13,10 +13,11 @@
 		    default-target-url="/welcome" 
 			authentication-failure-url="/login?error" 
 			username-parameter="username"
-			password-parameter="password" />
+			password-parameter="password"
+			 />
 		<logout logout-success-url="/login?logout"  />
 		<session-management>
-			<concurrency-control max-sessions="10" expired-url="/login?expired" session-registry-alias="sessionRegistry"/>
+			<concurrency-control max-sessions="1" expired-url="/login?expired" session-registry-alias="sessionRegistry"/>
 		</session-management>
 		<!-- enable csrf protection -->
 		<csrf/>
@@ -32,6 +33,9 @@
 	
 		<beans:bean id="sessionRegistry"
             class="org.springframework.security.core.session.SessionRegistryImpl" />
+            
+           
+            
 	
 
 </beans:beans>
