@@ -65,6 +65,10 @@ public class HelloController {
 			@RequestParam(value = "expired", required = false) String expired,
 			@RequestParam(value = "logout", required = false) String logout) {
 
+		
+		System.out.println("before login:::::" + SpringUserPrincipal.getUserPrincipal());
+		
+		
 		ModelAndView model = new ModelAndView();
 		if (error != null) {
 			model.addObject("error", "Invalid username and password!");
